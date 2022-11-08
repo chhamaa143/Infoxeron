@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Javascript CRUD</title>
+  </head>
+
+  <hr />
+  <center>
+    <h1>Table Data</h1>
+  </center>
+  <hr />
+
+  <body>
+    <form
+      class="employee-form"
+      action="javascript:void(0);"
+      method="POST"
+      onsubmit="app.Add()"
+    >
+      <input
+        type="text"
+        required
+        id="add-name"
+        placeholder="Name"
+        autocomplete="off"
+      />
+      <span id="NameErr"></span>
+      <input
+        type="text"
+        required
+        id="add-email"
+        placeholder="Email"
+        autocomplete="off"
+      />
+      <span id="EmailErr"></span>
+      <input
+        type="number"
+        required
+        id="add-age"
+        placeholder="Age"
+        autocomplete="off"
+      />
+      <span id="AgeErr"></span>
+      <input
+        type="number"
+        required
+        id="add-Mobile"
+        placeholder="Mobile"
+        autocomplete="off"
+      />
+      <span id="MobileErr"></span>
+
+      <input class="btn" type="submit" value="Add" />
+    </form>
+
+    <table class="employees-table">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Mobile</th>
+        <th>Edit Action</th>
+        <th>Delete Action</th>
+      </tr>
+      <tbody id="employee"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
